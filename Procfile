@@ -1,1 +1,1 @@
-web: python3 brainspell/brainspell.py
+web: python3 app.py
