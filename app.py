@@ -5,7 +5,6 @@ import tornado.web
 import tornado.httpclient
 import tornado.websocket
 import os
-import requests
 
 class BaseHandler(tornado.web.RequestHandler):
     def get_current_user(self):
