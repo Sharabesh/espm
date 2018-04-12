@@ -16,7 +16,9 @@ class MainHandler(BaseHandler):
     def get(self):
         self.render("templates/html/main.html")
 
-
+class TimelineHandler(BaseHandler):
+    def get(self):
+        self.render("templates/html/paginated_timeline.html")
 
 
 
@@ -33,6 +35,7 @@ def make_app():
             "path":os.path.join(os.path.dirname(os.path.abspath(__file__)), 'static')
         }),
         (r"/",MainHandler),
+        (r'/timeline',TimelineHandler),
 
     ], debug=True,compress_response=True, **settings)
 
