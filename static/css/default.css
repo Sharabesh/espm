@@ -131,7 +131,7 @@ a:hover {
 	-webkit-font-smoothing: antialiased;
 	text-indent: 8000px;
 	padding-left: 8px;
-	content: "\f061";
+
 }
 
 
@@ -149,5 +149,5 @@ a:hover {
 
 
 .icon-arrow-right:before {
-	content: "\f06";
+	content: "\f061";
 }

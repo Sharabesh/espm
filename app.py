@@ -18,7 +18,27 @@ class MainHandler(BaseHandler):
 
 class TimelineHandler(BaseHandler):
     def get(self):
-        self.render("templates/html/paginated_timeline.html")
+        self.render("templates/html/trade.html")
+
+class RemovalHandler(BaseHandler):
+    def get(self):
+        self.render("templates/html/removal.html")
+
+class AllotmentHandler(BaseHandler):
+    def get(self):
+        self.render("templates/html/allotment.html")
+class IraHandler(BaseHandler):
+    def get(self):
+        self.render("templates/html/IRA.html")
+
+class TerminationHandler(BaseHandler):
+    def get(self):
+        self.render("templates/html/termination.html")
+
+class DeterminationHandler(BaseHandler):
+    def get(self):
+        self.render("templates/html/determination.html")
+
 
 
 
@@ -36,6 +56,11 @@ def make_app():
         }),
         (r"/",MainHandler),
         (r'/timeline',TimelineHandler),
+        (r'/removal',RemovalHandler),
+        (r'/allotment',AllotmentHandler),
+        (r'/IRA',IraHandler),
+        (r'/termination',TerminationHandler),
+        (r'/determination',DeterminationHandler),
 
     ], debug=True,compress_response=True, **settings)
 
