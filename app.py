@@ -54,7 +54,7 @@ def make_app():
         (r"/static/(.*)", tornado.web.StaticFileHandler, {
             "path":os.path.join(os.path.dirname(os.path.abspath(__file__)), 'static')
         }),
-        (r"/",MainHandler),
+        (r"/",TimelineHandler),
         (r'/timeline',TimelineHandler),
         (r'/removal',RemovalHandler),
         (r'/allotment',AllotmentHandler),
